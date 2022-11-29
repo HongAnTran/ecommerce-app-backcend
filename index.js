@@ -43,7 +43,7 @@ app.use('/customer/purchase/all',customerRouter)
 
 
 //connect database
-const URL ='mongodb+srv://antechadmin:30112001@cluster0.edvhz.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const URL =process.env.URL_DATABASE
 mongoose.connect(URL,{useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('connect database successfully')

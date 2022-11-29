@@ -137,7 +137,6 @@ export const likeProductPage = async (req, res, next) => {
     const uid = req.body.uid;
     const productId = req.body.productId;
     const [product] = await ProductModel.find({ productId });
-    console.log(product);
     const checkedUser = product.listLikeProduct.includes(uid);
     
     if (!checkedUser) {

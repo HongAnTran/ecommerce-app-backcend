@@ -34,6 +34,8 @@ const userSchema = new Schema(
       type: Number,
       default: 0,
     },
+    sex: String,
+    dateOfBirth: String,
   },
   {
     timestamps: true,
