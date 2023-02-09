@@ -11,6 +11,9 @@ import orderRouter from './routes/order.js'
 import customerRouter from './routes/customerRouter.js'
 import rateRouter from './routes/rate.js';
 
+import dotenv from 'dotenv'
+
+dotenv.config()
 
 const app = express()
 const port = process.env.PORT || 5000
@@ -44,6 +47,9 @@ app.use('/customer/purchase/all',customerRouter)
 
 //connect database
 const URL =process.env.URL_DATABASE
+
+
+
 mongoose.connect(URL,{useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => {
         console.log('connect database successfully')
